@@ -1,0 +1,34 @@
+server:
+ port: 8082
+ session-timeout: 30
+ tomcat.max-threads: 0
+ tomcat.uri-encoding: UTF-8
+#HTTPS配置
+#  ssl:
+#    key-store: keystore.p12
+#    key-store-password: tanoak
+#    key-store-type: JKS
+#    key-alias: tomcat
+#数据源配置
+spring:
+ datasource:
+    url : jdbc:mysql://localhost:3306/test
+    username : root
+    password :
+    driverClassName : com.mysql.jdbc.Driver
+#SpringData配置
+ jpa:
+    database : MYSQL
+    show-sql : true
+    hibernate:
+      ddl-auto : update
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect : org.hibernate.dialect.MySQL5Dialect
+#thymeleaf配置
+thymeleaf:
+ cache: false
+ mode: HTML5
+ encoding: utf-8
+ content-type: text/html
