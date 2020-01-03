@@ -20,11 +20,11 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public  String hello(Model model) {
-        Hello hello123 = helloMapper.findOne((long)1);
-        String name = hello123.getName();
+        Hello hello1 = helloMapper.findOne((long)1);
+        String name = hello1.getName();
         model.addAttribute("name",name);
 
-        //跳转到 templates下的hello.html
+        //跳转到templates下的hello.html
         return  "hello";
 }
 
